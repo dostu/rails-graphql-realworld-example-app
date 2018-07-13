@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.5.1
+script:
+  - bundle exec rails db:setup
+  - bundle exec rails spec
+cache: bundler
+services:
+  - postgresql
