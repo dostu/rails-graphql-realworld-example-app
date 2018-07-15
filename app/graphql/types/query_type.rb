@@ -38,12 +38,6 @@ class Types::QueryType < GraphQL::Schema::Object
     articles.order(id: :desc)
   end
 
-  field :feed, Types::ArticleType.connection_type, null: false
-  def feed
-    raise GraphQL::ExecutionError, 'Not authorized' unless current_user
-    Article.where(author: current_user.followees).order(id: :desc)
-  end
-
   field :article, Types::ArticleType, null: true do
     argument :slug, String, required: true
   end

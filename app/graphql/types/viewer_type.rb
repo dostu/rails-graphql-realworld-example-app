@@ -1,9 +1,13 @@
 class Types::ViewerType < GraphQL::Schema::Object
   graphql_name 'Viewer'
 
-  field :id, ID, null: false
-  field :username, String, null: false
-  field :email, String, null: false
-  field :image, String, null: true
-  field :bio, String, null: true
+  field :profile, Types::ProfileType, null: false
+  def profile
+    object
+  end
+
+  field :feed, Types::ArticleType.connection_type, null: false
+  def feed
+    Article.where(author: object.followees).order(id: :desc)
+  end
 end
