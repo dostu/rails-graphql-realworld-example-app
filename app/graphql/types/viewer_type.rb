@@ -1,5 +1,5 @@
-class Types::UserType < GraphQL::Schema::Object
-  graphql_name 'User'
+class Types::ViewerType < GraphQL::Schema::Object
+  graphql_name 'Viewer'
 
   field :id, ID, null: false
   field :username, String, null: false

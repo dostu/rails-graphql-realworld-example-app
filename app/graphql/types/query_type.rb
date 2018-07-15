@@ -1,6 +1,6 @@
 class Types::QueryType < GraphQL::Schema::Object
-  field :currentUser, Types::UserType, null: true, method: :current_user
-  def current_user
+  field :viewer, Types::ViewerType, null: true
+  def viewer
     context[:current_user]
   end
 

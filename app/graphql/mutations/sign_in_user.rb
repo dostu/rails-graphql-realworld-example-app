@@ -3,7 +3,7 @@ class Mutations::SignInUser < Mutations::Base
   argument :password, String, required: true
 
   field :token, String, null: true
-  field :user, Types::UserType, null: true
+  field :user, Types::ViewerType, null: true
   field :errors, [Types::UserErrorType], null: false
 
   def resolve(email:, password:)
