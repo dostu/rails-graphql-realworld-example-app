@@ -1,6 +1,6 @@
 class Types::QueryType < GraphQL::Schema::Object
-  field :currentUser, Types::UserType, null: true, method: :current_user
-  def current_user
+  field :me, Types::UserType, null: true
+  def me
     context[:current_user]
   end
 

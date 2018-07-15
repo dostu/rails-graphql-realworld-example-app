@@ -211,7 +211,6 @@ type Query {
     last: Int
     tag: String
   ): ArticleConnection!
-  currentUser: User
   feed(
     # Returns the elements in the list that come after the specified cursor.
     after: String
@@ -225,6 +224,7 @@ type Query {
     # Returns the last _n_ elements from the list.
     last: Int
   ): ArticleConnection!
+  me: User
   profile(username: String!): Profile
   tags: [String!]!
 }
