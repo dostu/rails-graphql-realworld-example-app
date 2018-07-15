@@ -1,4 +1,4 @@
-class Mutations::Base < GraphQL::Schema::Mutation
+class Mutations::Base < GraphQL::Schema::RelayClassicMutation
   def user_errors(errors)
     errors.full_messages.map { |error| UserError.new(error) }
   end

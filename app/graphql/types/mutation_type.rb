@@ -1,7 +1,7 @@
 class Types::MutationType < GraphQL::Schema::Object
   field :createUser, mutation: Mutations::CreateUser
   field :updateUser, mutation: Mutations::UpdateUser
-  field :signinUser, mutation: Mutations::SignInUser
+  field :signInUser, mutation: Mutations::SignInUser
   field :followUser, mutation: Mutations::FollowUser
   field :unfollowUser, mutation: Mutations::UnfollowUser
 
