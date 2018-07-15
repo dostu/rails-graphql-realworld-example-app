@@ -7,7 +7,7 @@ class Types::ProfileType < GraphQL::Schema::Object
   field :image, String, null: true
   field :bio, String, null: true
   field :following, Boolean, null: false
-  field :followersCount, Int, null: false, method: :follows_count
+  field :followers, Types::FollowersConnectionType, null: false, connection: true
 
   def following
     current_user = context[:current_user]

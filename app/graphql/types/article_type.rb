@@ -6,11 +6,11 @@ class Types::ArticleType < GraphQL::Schema::Object
   field :title, String, null: false
   field :description, String, null: false
   field :body, String, null: false
-  field :tagList, [String], null: false, method: :tag_list
-  field :createdAt, Types::DateTimeType, null: false, method: :created_at
-  field :updatedAt, Types::DateTimeType, null: false, method: :updated_at
+  field :tag_list, [String], null: false
+  field :created_at, Types::DateTimeType, null: false
+  field :updated_at, Types::DateTimeType, null: false
   field :favorited, Boolean, null: false
-  field :favoritesCount, Int, null: false, method: :favorites_count
+  field :favorites_count, Int, null: false
   field :author, Types::ProfileType, null: false
   field :comments, [Types::CommentType], null: false
 

@@ -2,10 +2,11 @@ class Types::CommentType < GraphQL::Schema::Object
   graphql_name 'Comment'
 
   field :id, ID, null: false
-  field :createdAt, Types::DateTimeType, null: false, method: :created_at
-  field :updatedAt, Types::DateTimeType, null: false, method: :updated_at
+  field :created_at, Types::DateTimeType, null: false
+  field :updated_at, Types::DateTimeType, null: false
   field :body, String, null: false
-  field :author, Types::ProfileType, null: false
+  field :author, Types::ProfileType, null: true
+  field :article, Types::ArticleType, null: true
 
   def author
     Loaders::RecordLoader.for(User).load(object.author_id)
