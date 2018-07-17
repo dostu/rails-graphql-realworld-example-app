@@ -16,7 +16,7 @@ type AddCommentPayload {
 }
 
 type Article {
-  author: User!
+  author: User
   body: String!
   comments: [Comment!]!
   createdAt: DateTime!
@@ -202,11 +202,9 @@ type Query {
   articles(
     # Returns the elements in the list that come after the specified cursor.
     after: String
-    authoredBy: String
 
     # Returns the elements in the list that come before the specified cursor.
     before: String
-    favoritedBy: String
 
     # Returns the first _n_ elements from the list.
     first: Int
@@ -366,7 +364,7 @@ type UserEdge {
 
 type UserError {
   message: String!
-  path: [String!]
+  path: String
 }
 
 type Viewer {

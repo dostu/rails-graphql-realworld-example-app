@@ -3,7 +3,7 @@ class Mutations::UpdateArticle < Mutations::Base
   argument :title, String, required: true
   argument :description, String, required: true
   argument :body, String, required: true
-  argument :tagList, [String], required: true, as: :tag_list
+  argument :tag_list, [String], required: true
 
   field :article, Types::ArticleType, null: true
   field :errors, [Types::UserErrorType], null: false

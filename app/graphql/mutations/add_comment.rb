@@ -1,5 +1,5 @@
 class Mutations::AddComment < Mutations::Base
-  argument :articleId, ID, required: true, as: :article_id
+  argument :article_id, ID, required: true
   argument :body, String, required: true
 
   field :comment, Types::CommentType, null: true

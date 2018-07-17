@@ -11,7 +11,7 @@ class Types::ArticleType < GraphQL::Schema::Object
   field :updated_at, Types::DateTimeType, null: false
   field :viewer_has_favorited, Boolean, null: false
   field :favorites_count, Int, null: false
-  field :author, Types::UserType, null: false
+  field :author, Types::UserType, null: true
   field :comments, [Types::CommentType], null: false
 
   def viewer_has_favorited
