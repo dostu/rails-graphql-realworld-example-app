@@ -5,7 +5,7 @@ class Mutations::UpdateUser < Mutations::Base
   argument :image, String, required: false
   argument :password, String, required: false
 
-  field :user, Types::ViewerType, null: true
+  field :user, Types::UserType, null: true
   field :errors, [Types::UserErrorType], null: false
 
   def resolve(email:, username:, bio: nil, image: nil, password: nil)

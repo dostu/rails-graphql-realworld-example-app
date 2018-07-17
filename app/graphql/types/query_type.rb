@@ -4,10 +4,10 @@ class Types::QueryType < GraphQL::Schema::Object
     context[:current_user]
   end
 
-  field :profile, Types::ProfileType, null: true do
+  field :user, Types::UserType, null: true do
     argument :username, String, required: true
   end
-  def profile(username:)
+  def user(username:)
     User.find_by(username: username)
   end
 

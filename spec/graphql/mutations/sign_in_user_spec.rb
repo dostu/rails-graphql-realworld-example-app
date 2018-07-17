@@ -15,7 +15,7 @@ describe Mutations::SignInUser do
 
     expect(result).to be_present
     expect(result[:token]).to be_present
-    expect(result[:user]).to eq(user)
+    expect(result[:viewer]).to eq(user)
   end
 
   it 'handles no credentials' do

@@ -1,7 +1,7 @@
 class Mutations::UnfollowUser < Mutations::Base
   argument :id, ID, required: true
 
-  field :user, Types::ProfileType, null: true
+  field :user, Types::UserType, null: true
 
   def resolve(id:)
     current_user = ensure_current_user

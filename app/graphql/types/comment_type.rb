@@ -5,7 +5,7 @@ class Types::CommentType < GraphQL::Schema::Object
   field :created_at, Types::DateTimeType, null: false
   field :updated_at, Types::DateTimeType, null: false
   field :body, String, null: false
-  field :author, Types::ProfileType, null: true
+  field :author, Types::UserType, null: true
   field :article, Types::ArticleType, null: true
 
   def author

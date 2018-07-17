@@ -9,12 +9,12 @@ class Types::ArticleType < GraphQL::Schema::Object
   field :tag_list, [String], null: false
   field :created_at, Types::DateTimeType, null: false
   field :updated_at, Types::DateTimeType, null: false
-  field :favorited, Boolean, null: false
+  field :viewer_has_favorited, Boolean, null: false
   field :favorites_count, Int, null: false
-  field :author, Types::ProfileType, null: false
+  field :author, Types::UserType, null: false
   field :comments, [Types::CommentType], null: false
 
-  def favorited
+  def viewer_has_favorited
     current_user = context[:current_user]
     return false unless current_user
     Loaders::FavoritesLoader.for(current_user).load(object.id)

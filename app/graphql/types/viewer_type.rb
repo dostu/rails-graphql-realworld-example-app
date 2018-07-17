@@ -1,8 +1,8 @@
 class Types::ViewerType < GraphQL::Schema::Object
   graphql_name 'Viewer'
 
-  field :profile, Types::ProfileType, null: false
-  def profile
+  field :user, Types::UserType, null: false
+  def user
     object
   end
 
