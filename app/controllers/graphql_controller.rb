@@ -1,4 +1,6 @@
 class GraphqlController < ApplicationController
+  include Knock::Authenticable
+
   def execute
     result = RealworldSchema.execute(
       params[:query],
@@ -32,17 +34,5 @@ class GraphqlController < ApplicationController
     else
       raise ArgumentError, "Unexpected parameter: #{ambiguous_param}"
     end
-  end
-
-  def current_user
-    authorization_header = request.headers[:authorization]
-    return if authorization_header.blank?
-
-    token = authorization_header.split(' ').last
-    payload = Knock::AuthToken.new(token: token).payload
-
-    User.find_by(id: payload['sub'])
-  rescue JWT::DecodeError
-    nil
   end
 end
