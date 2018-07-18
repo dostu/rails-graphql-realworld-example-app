@@ -15,6 +15,6 @@ There is [React + Apollo frontend](https://github.com/dostu/react-apollo-realwor
 Make sure you have PostgreSQL installed.
 
 1. Clone this repo
-3. `bundle install` to install required dependencies
-4. `rails db:reset` to create database, load schema and seed data
-5. `rails s` to start the local server
+2. `bundle install` to install required dependencies
+3. `rails db:reset` to create database, load schema and seed data
+4. `rails s` to start the local server
