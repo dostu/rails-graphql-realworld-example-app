@@ -26,4 +26,4 @@
 /config/master.key
 
 /.sass-cache
-/public/docs
+#/public/docs

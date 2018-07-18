@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="__DirectiveLocation GraphQL documentation">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>__DirectiveLocation</title>
+    <link rel="stylesheet" href="docs/assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+    <script>
+
+    // Add anchors on DOMContentLoaded
+    document.addEventListener("DOMContentLoaded", function(event) {
+      anchors.options = {
+        placement: 'left',
+        visible: 'hover',
+        icon: '¶'
+      };
+      anchors.add('h2, h3, h4, h5, h6, .anchored');
+    });
+
+    </script>
+  </head>
+  <body>
+
+    <div id="wrap">
+      <div id="header">
+      </div>
+      <div id="sidebar">
+        <ul class="categories">
+  <li>
+    <ul class="menu-root">
+      <li>
+        <a href="docs">GraphQL Reference</a>
+    </ul>
+  </li>
+
+  <li>
+    <p>Queries</p>
+    <ul class="menu-root">
+      <li>
+        <a href="docs/operation/query/" class="sidebar-link">
+          Query
+        </a>
+      </li>
+      <li>
+        <a href="docs/operation/mutation/" class="sidebar-link">
+          Mutation
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="docs/object">Objects</a></p>
+    <ul class="menu-root">
+      
+        
+      <li>
+        <a href="docs/object/addcommentpayload/" class="sidebar-link">
+          AddCommentPayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/article/" class="sidebar-link">
+          Article
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/articleconnection/" class="sidebar-link">
+          ArticleConnection
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/articleedge/" class="sidebar-link">
+          ArticleEdge
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/comment/" class="sidebar-link">
+          Comment
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/createarticlepayload/" class="sidebar-link">
+          CreateArticlePayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/createuserpayload/" class="sidebar-link">
+          CreateUserPayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/deletearticlepayload/" class="sidebar-link">
+          DeleteArticlePayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/deletecommentpayload/" class="sidebar-link">
+          DeleteCommentPayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/favoritearticlepayload/" class="sidebar-link">
+          FavoriteArticlePayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/followuserpayload/" class="sidebar-link">
+          FollowUserPayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/followersconnection/" class="sidebar-link">
+          FollowersConnection
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/pageinfo/" class="sidebar-link">
+          PageInfo
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/signinuserpayload/" class="sidebar-link">
+          SignInUserPayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/unfavoritearticlepayload/" class="sidebar-link">
+          UnfavoriteArticlePayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/unfollowuserpayload/" class="sidebar-link">
+          UnfollowUserPayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/updatearticlepayload/" class="sidebar-link">
+          UpdateArticlePayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/updateuserpayload/" class="sidebar-link">
+          UpdateUserPayload
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/user/" class="sidebar-link">
+          User
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/useredge/" class="sidebar-link">
+          UserEdge
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/usererror/" class="sidebar-link">
+          UserError
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/viewer/" class="sidebar-link">
+          Viewer
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/__directive/" class="sidebar-link">
+          __Directive
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/__enumvalue/" class="sidebar-link">
+          __EnumValue
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/__field/" class="sidebar-link">
+          __Field
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/__inputvalue/" class="sidebar-link">
+          __InputValue
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/__schema/" class="sidebar-link">
+          __Schema
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="docs/object/__type/" class="sidebar-link">
+          __Type
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="docs/operation/mutation">Mutations</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="docs/mutation/addcomment/" class="sidebar-link">
+          addComment
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/createarticle/" class="sidebar-link">
+          createArticle
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/createuser/" class="sidebar-link">
+          createUser
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/deletearticle/" class="sidebar-link">
+          deleteArticle
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/deletecomment/" class="sidebar-link">
+          deleteComment
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/favoritearticle/" class="sidebar-link">
+          favoriteArticle
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/followuser/" class="sidebar-link">
+          followUser
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/signinuser/" class="sidebar-link">
+          signInUser
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/unfavoritearticle/" class="sidebar-link">
+          unfavoriteArticle
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/unfollowuser/" class="sidebar-link">
+          unfollowUser
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/updatearticle/" class="sidebar-link">
+          updateArticle
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/mutation/updateuser/" class="sidebar-link">
+          updateUser
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="docs/interface">Interfaces</a></p>
+    <ul class="menu-root">
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="docs/enum">Enums</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="docs/enum/__directivelocation/" class="sidebar-link">
+          __DirectiveLocation
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/enum/__typekind/" class="sidebar-link">
+          __TypeKind
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="docs/union">Unions</a></p>
+    <ul class="menu-root">
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="docs/input_object">Input Objects</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="docs/input_object/addcommentinput/" class="sidebar-link">
+          AddCommentInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/createarticleinput/" class="sidebar-link">
+          CreateArticleInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/createuserinput/" class="sidebar-link">
+          CreateUserInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/deletearticleinput/" class="sidebar-link">
+          DeleteArticleInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/deletecommentinput/" class="sidebar-link">
+          DeleteCommentInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/favoritearticleinput/" class="sidebar-link">
+          FavoriteArticleInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/followuserinput/" class="sidebar-link">
+          FollowUserInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/signinuserinput/" class="sidebar-link">
+          SignInUserInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/unfavoritearticleinput/" class="sidebar-link">
+          UnfavoriteArticleInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/unfollowuserinput/" class="sidebar-link">
+          UnfollowUserInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/updatearticleinput/" class="sidebar-link">
+          UpdateArticleInput
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/input_object/updateuserinput/" class="sidebar-link">
+          UpdateUserInput
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="docs/scalar">Scalars</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="docs/scalar/boolean/" class="sidebar-link">
+          Boolean
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/scalar/datetime/" class="sidebar-link">
+          DateTime
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/scalar/float/" class="sidebar-link">
+          Float
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/scalar/id/" class="sidebar-link">
+          ID
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/scalar/int/" class="sidebar-link">
+          Int
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="docs/scalar/string/" class="sidebar-link">
+          String
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+      </div>
+      <div id="content">
+
+        <h1>
+<a id="__directivelocation" class="anchor" href="#__directivelocation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>__DirectiveLocation</h1>
+<p>A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.</p>
+<h3 id="fields">
+<a id="values" class="anchor" href="#values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Values</h3>
+  <h4 id="query" class="name anchored">
+<a id="query" class="anchor" href="#query" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>QUERY</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a query operation.</p>
+  </div>
+  <h4 id="mutation" class="name anchored">
+<a id="mutation" class="anchor" href="#mutation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MUTATION</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a mutation operation.</p>
+  </div>
+  <h4 id="subscription" class="name anchored">
+<a id="subscription" class="anchor" href="#subscription" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SUBSCRIPTION</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a subscription operation.</p>
+  </div>
+  <h4 id="field" class="name anchored">
+<a id="field" class="anchor" href="#field" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FIELD</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a field.</p>
+  </div>
+  <h4 id="fragment_definition" class="name anchored">
+<a id="fragment_definition" class="anchor" href="#fragment_definition" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FRAGMENT_DEFINITION</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a fragment definition.</p>
+  </div>
+  <h4 id="fragment_spread" class="name anchored">
+<a id="fragment_spread" class="anchor" href="#fragment_spread" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FRAGMENT_SPREAD</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a fragment spread.</p>
+  </div>
+  <h4 id="inline_fragment" class="name anchored">
+<a id="inline_fragment" class="anchor" href="#inline_fragment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INLINE_FRAGMENT</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to an inline fragment.</p>
+  </div>
+  <h4 id="schema" class="name anchored">
+<a id="schema" class="anchor" href="#schema" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SCHEMA</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a schema definition.</p>
+  </div>
+  <h4 id="scalar" class="name anchored">
+<a id="scalar" class="anchor" href="#scalar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SCALAR</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a scalar definition.</p>
+  </div>
+  <h4 id="object" class="name anchored">
+<a id="object" class="anchor" href="#object" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OBJECT</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to an object type definition.</p>
+  </div>
+  <h4 id="field_definition" class="name anchored">
+<a id="field_definition" class="anchor" href="#field_definition" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FIELD_DEFINITION</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a field definition.</p>
+  </div>
+  <h4 id="argument_definition" class="name anchored">
+<a id="argument_definition" class="anchor" href="#argument_definition" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ARGUMENT_DEFINITION</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to an argument definition.</p>
+  </div>
+  <h4 id="interface" class="name anchored">
+<a id="interface" class="anchor" href="#interface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INTERFACE</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to an interface definition.</p>
+  </div>
+  <h4 id="union" class="name anchored">
+<a id="union" class="anchor" href="#union" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UNION</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to a union definition.</p>
+  </div>
+  <h4 id="enum" class="name anchored">
+<a id="enum" class="anchor" href="#enum" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ENUM</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to an enum definition.</p>
+  </div>
+  <h4 id="enum_value" class="name anchored">
+<a id="enum_value" class="anchor" href="#enum_value" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ENUM_VALUE</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to an enum value definition.</p>
+  </div>
+  <h4 id="input_object" class="name anchored">
+<a id="input_object" class="anchor" href="#input_object" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INPUT_OBJECT</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to an input object type definition.</p>
+  </div>
+  <h4 id="input_field_definition" class="name anchored">
+<a id="input_field_definition" class="anchor" href="#input_field_definition" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INPUT_FIELD_DEFINITION</h4>
+  <div class="description-wrapper">
+   <p>Location adjacent to an input object field definition.</p>
+  </div>
+
+      </div>
+
+      <!-- mobile only -->
+      <div id="mobile-header">
+        <a class="menu-button"></a>
+        <a class="logo" href="docs">
+
+        </a>
+      </div>
+      <div id="mobile-shade"></div>
+
+    </div>
+
+  </body>
+</html>
