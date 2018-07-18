@@ -31,10 +31,12 @@ gem 'rack-cors'
 gem 'acts-as-taggable-on'
 gem 'bcrypt'
 gem 'friendly_id'
+gem 'knock'
 gem 'graphql'
 gem 'graphql-batch'
-gem 'knock'
+gem 'graphql-docs'
 gem 'graphiql-rails'
+gem 'graphql-rails_logger'
 gem 'newrelic_rpm'
 
 group :development, :test do
