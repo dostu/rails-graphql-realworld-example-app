@@ -10,7 +10,7 @@ namespace :graphql do
     GraphQLDocs.build(
       filename: 'app/graphql/schema.graphql',
       output_dir: 'public/docs',
-      base_url: 'docs'
+      base_url: '/docs'
     )
   end
 end
