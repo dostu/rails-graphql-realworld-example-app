@@ -7,8 +7,8 @@ class Types::ArticleType < GraphQL::Schema::Object
   field :description, String, null: false
   field :body, String, null: false
   field :tag_list, [String], null: false
-  field :created_at, Types::DateTimeType, null: false
-  field :updated_at, Types::DateTimeType, null: false
+  field :created_at, GraphQL::Types::ISO8601DateTime, null: false
+  field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   field :viewer_has_favorited, Boolean, null: false
   field :favorites_count, Int, null: false
   field :author, Types::UserType, null: true
