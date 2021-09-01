@@ -3,8 +3,10 @@ require 'rails_helper'
 describe Mutations::CreateArticle do
   let!(:user) { create :user }
 
-  def perform(args = {})
-    described_class.new(object: nil, field: nil, context: { current_user: user }).resolve(args)
+  def perform(title:, description:, body:, tag_list:)
+    described_class.new(object: nil, field: nil, context: { current_user: user }).resolve(
+      title: title, description: description, body: body, tag_list: tag_list
+    )
   end
 
   it 'creates a new article' do

@@ -3,8 +3,10 @@ require 'rails_helper'
 describe Mutations::SignInUser do
   let!(:user) { create :user }
 
-  def perform(args)
-    described_class.new(object: nil, field: nil, context: {}).resolve(args)
+  def perform(email:, password:)
+    described_class.new(object: nil, field: nil, context: {}).resolve(
+      email: email, password: password
+    )
   end
 
   it 'creates a token' do

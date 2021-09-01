@@ -117,10 +117,9 @@ GEM
       bcrypt (~> 3.1)
       jwt (~> 1.5)
       rails (>= 4.2)
-    listen (3.1.5)
+    listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-      ruby_dep (~> 1.2)
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -129,13 +128,11 @@ GEM
     marcel (1.0.1)
     method_source (1.0.0)
     mini_mime (1.1.1)
-    mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)
     newrelic_rpm (7.2.0)
     nio4r (2.5.8)
-    nokogiri (1.12.4)
-      mini_portile2 (~> 2.6.1)
+    nokogiri (1.12.4-x86_64-darwin)
       racc (~> 1.4)
     parallel (1.20.1)
     parser (3.0.2.0)
@@ -213,7 +210,6 @@ GEM
     rubocop-ast (1.11.0)
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
-    ruby_dep (1.5.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -240,7 +236,7 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-20
 
 DEPENDENCIES
   acts-as-taggable-on
@@ -268,7 +264,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.0.2p107
 
 BUNDLED WITH
-   1.17.3
+   2.2.22

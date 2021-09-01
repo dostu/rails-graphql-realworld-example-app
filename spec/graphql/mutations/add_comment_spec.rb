@@ -4,8 +4,10 @@ describe Mutations::AddComment do
   let!(:user) { create :user }
   let!(:article) { create :article, author: user }
 
-  def perform(args = {})
-    described_class.new(object: nil, field: nil, context: { current_user: user }).resolve(args)
+  def perform(article_id:, body:)
+    described_class.new(object: nil, field: nil, context: { current_user: user }).resolve(
+      article_id: article_id, body: body
+    )
   end
 
   it 'adds a comment to an article' do

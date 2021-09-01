@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 describe Mutations::CreateUser do
-  def perform(args = {})
-    described_class.new(object: nil, field: nil, context: {}).resolve(args)
+  def perform(username:, email:, password:)
+    described_class.new(object: nil, field: nil, context: {}).resolve(
+      username: username, email: email, password: password
+    )
   end
 
   it 'creates a new user' do
