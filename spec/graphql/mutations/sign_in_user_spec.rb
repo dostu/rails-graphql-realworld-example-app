@@ -4,7 +4,7 @@ describe Mutations::SignInUser do
   let!(:user) { create :user }
 
   def perform(args)
-    described_class.new(object: nil, context: {}).resolve(args)
+    described_class.new(object: nil, field: nil, context: {}).resolve(args)
   end
 
   it 'creates a token' do

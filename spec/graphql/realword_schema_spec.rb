@@ -1,5 +1,7 @@
 require 'rails_helper'
 
+# Run `bundle exec rails graphql:schema` to update
+
 describe RealworldSchema do
   def execute_graphql_query(query, variables = {}, context = {})
     result = RealworldSchema.execute(

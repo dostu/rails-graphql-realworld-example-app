@@ -4,7 +4,7 @@ describe Mutations::CreateArticle do
   let!(:user) { create :user }
 
   def perform(args = {})
-    described_class.new(object: nil, context: { current_user: user }).resolve(args)
+    described_class.new(object: nil, field: nil, context: { current_user: user }).resolve(args)
   end
 
   it 'creates a new article' do
